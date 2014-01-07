@@ -22,7 +22,6 @@ class Users extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users:create
      */
@@ -36,7 +35,6 @@ class Users extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users:getpricing
      */
@@ -53,13 +51,12 @@ class Users extends Namecheap
      * attribute shows the amount needed in your NameCheap account to complete auto renewal.
      *
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users:getbalances
      */
     public function getBalances()
     {
-        return $this->client->send($this->namespace.__FUNCTION__, );
+        return $this->client->send($this->namespace.__FUNCTION__);
     }
 
     /**
@@ -67,7 +64,6 @@ class Users extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users:changepassword
      */
@@ -81,7 +77,6 @@ class Users extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users:update
      */

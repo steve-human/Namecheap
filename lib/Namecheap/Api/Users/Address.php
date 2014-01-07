@@ -17,7 +17,6 @@ class Address extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:create
      */
@@ -31,7 +30,6 @@ class Address extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:update
      */
@@ -45,7 +43,6 @@ class Address extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:delete
      */
@@ -57,21 +54,19 @@ class Address extends Namecheap
     /**
      * Gets a list of addressIDs and addressnames associated with the user account
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:getlist
      */
     public function getList()
     {
-        return $this->client->send($this->namespace.__FUNCTION__, );
+        return $this->client->send($this->namespace.__FUNCTION__);
     }
 
     /**
      * Gets information for the requested addressID
      *
-     * @param array $params            
+     * @params array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:getinfo
      */
@@ -85,7 +80,6 @@ class Address extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:setdefault
      */
