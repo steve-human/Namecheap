@@ -20,7 +20,6 @@ class Transfer extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.transfer:create
      */
@@ -34,7 +33,6 @@ class Transfer extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.transfer:getstatus
      */
@@ -48,7 +46,6 @@ class Transfer extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.transfer:updatestatus
      */

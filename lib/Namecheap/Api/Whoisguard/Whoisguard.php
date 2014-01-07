@@ -19,7 +19,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:allot
      */
@@ -33,7 +32,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:changeemailaddress
      */
@@ -47,7 +45,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:disable
      */
@@ -61,7 +58,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:discard
      */
@@ -75,7 +71,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:enable
      */
@@ -89,7 +84,6 @@ class Whoisguard extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:whoisguard:unallot
      */

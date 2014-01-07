@@ -23,7 +23,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:setdefault
      */
@@ -40,7 +39,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:setcustom
      */
@@ -54,7 +52,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:getlist
      */
@@ -68,7 +65,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:gethosts
      */
@@ -86,7 +82,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:sethosts
      */
@@ -100,7 +95,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:getemailforwarding
      */
@@ -117,7 +111,6 @@ class Dns extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains.dns:setemailforwarding
      */

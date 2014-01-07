@@ -33,7 +33,6 @@ class Response
     /**
      * Returns the response status (OK = success, ERROR = error, null = invalid responses)
      *
-     * @access public
      * @return string NULL
      */
     public function getStatus()
@@ -47,7 +46,6 @@ class Response
     /**
      * Returns errors contained in the response
      *
-     * @access public
      * @return string|array
      */
     public function getErrors()
@@ -75,7 +73,6 @@ class Response
     /**
      * Returns the raw XML response
      * 
-     * @access public
      * @return string
      */
     public function getRaw()

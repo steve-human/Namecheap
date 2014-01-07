@@ -20,7 +20,6 @@ class Ssl extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:activate
      */
@@ -35,7 +34,6 @@ class Ssl extends Namecheap
      * @param
      *            s array $params
      *            
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:getinfo
      */
@@ -49,7 +47,6 @@ class Ssl extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:parsecsr
      */
@@ -63,7 +60,6 @@ class Ssl extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:getapproveremaillist
      */
@@ -77,7 +73,6 @@ class Ssl extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:getlist
      */
@@ -91,7 +86,6 @@ class Ssl extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:ssl:create
      */

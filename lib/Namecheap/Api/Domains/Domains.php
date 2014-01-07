@@ -20,7 +20,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getlist
      */
@@ -32,7 +31,6 @@ class Domains extends Namecheap
     /**
      * Returns a list of tlds
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:gettldlist
      */
@@ -46,7 +44,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:create
      */
@@ -60,7 +57,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getcontacts
      */
@@ -74,7 +70,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:setcontacts
      */
@@ -88,7 +83,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:check
      */
@@ -102,7 +96,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:reactivate
      */
@@ -116,7 +109,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:renew
      */
@@ -130,7 +122,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getregistrarlock
      */
@@ -144,7 +135,6 @@ class Domains extends Namecheap
      *
      * @param array $params            
      *
-     * @access public
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:setregistrarlock
      */

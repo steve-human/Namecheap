@@ -16,7 +16,6 @@ abstract class Namecheap
 	 * Sets the Namecheap client
 	 * 
 	 * @param Namecheap\Client $client
-	 * @access public
 	 */
 	public function __construct(Client $client)
 	{

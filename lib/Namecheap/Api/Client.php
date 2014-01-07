@@ -53,7 +53,6 @@ class Client
      * @param string $client_ip
      * @param string $sandbox
      * 
-     * @access public
      */
     public function __construct($api_user, $api_key, $client_ip, $sandbox = false)
     {
@@ -73,7 +72,6 @@ class Client
      * Set the user who will be sending the API command
      * 
      * @param string $username
-     * @access public
      */
     public function setUsername($username)
     {
@@ -86,7 +84,6 @@ class Client
      * @param string $command
      * @param array $params
      * 
-     * @access public
      * @return \Namecheap\Api\Response
      */
     public function send($command, $params = array())
@@ -116,7 +113,6 @@ class Client
     /**
      * Returns the last request sent
      * 
-     * @access public
      * @return array 
      */
     public function getLastRequest()
