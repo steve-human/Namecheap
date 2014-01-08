@@ -7,40 +7,49 @@ use Namecheap\Api\Client;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
-    public function testSendReturnsResponse()
+    public function setUp()
     {
-        $data = $this->getApiData();
-        $command = 'namecheap.domains.gettldlist';
-        $client = new Client($data['api_user'], $data['api_key'], $data['client_ip']);
+        $data = array(
+            'api_user' => 'user',
+            'api_key' => 'key',
+            'client_ip' => 'ip'
+        );
         
-        $this->assertInstanceOf('\Namecheap\Api\Response', $client->send($command));
+        $this->client = new Client($data['api_user'], $data['api_key'], $data['client_ip']);
     }
     
+    public function teadDown()
+    {
+        unset($this->client);
+    }
+    
+    /**
+     * @test
+     */
+    public function testSendReturnsResponse()
+    {
+        $command = 'namecheap.domains.gettldlist';
+        $this->assertInstanceOf('\Namecheap\Api\Response', $this->client->send($command));
+    }
+    
+    /**
+     * @test
+     */
     public function testLastRequestReturnsRequestArray()
     {
-        $data = $this->getApiData();
-        $client = new Client($data['api_user'], $data['api_key'], $data['client_ip']);
-        $domain = new \Namecheap\Api\Domains\Domains($client);
+        $domain = new \Namecheap\Api\Domains\Domains($this->client);
         $domain->getTldList();
-        $request = $client->getLastRequest();
+        $request = $this->client->getLastRequest();
         
         $this->assertArrayHasKey('url', $request);
         $this->assertArrayHasKey('params', $request);
     }
     
+    /**
+     * @test
+     */
     public function testLastRequestIsNull()
     {
-        $data = $this->getApiData(); 
-        $client = new Client($data['api_user'], $data['api_key'], $data['client_ip']);
-        $this->assertNull($client->getLastRequest());
-    }
-    
-    public function getApiData()
-    {
-        return array(
-            'api_user' => 'user',
-            'api_key' => 'key',
-            'client_ip' => 'ip'
-        );
+        $this->assertNull($this->client->getLastRequest());
     }
 }
