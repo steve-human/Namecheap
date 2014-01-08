@@ -34,7 +34,7 @@ class Domains extends Namecheap
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:gettldlist
      */
-    public function getTldlist()
+    public function getTldList()
     {
         return $this->client->send($this->namespace.__FUNCTION__);
     }

@@ -88,6 +88,7 @@ class Client
      */
     public function send($command, $params = array())
     {
+        $command = strtolower($command);
         $params['ApiUser'] = $this->api_user;
         $params['ApiKey'] = $this->api_key;
         $params['UserName'] = $this->username;

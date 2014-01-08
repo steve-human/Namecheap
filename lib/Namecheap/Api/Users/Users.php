@@ -10,7 +10,9 @@ use Namecheap\Api\Namecheap;
  */
 class Users extends Namecheap
 {
+
     /**
+     *
      * @var string
      */
     private $namespace = 'namecheap.users.';
@@ -27,7 +29,7 @@ class Users extends Namecheap
      */
     public function create(array $params)
     {
-        return $this->client->send($this->namespace.__FUNCTION__, $params);
+        return $this->client->send($this->namespace . __FUNCTION__, $params);
     }
 
     /**
@@ -40,7 +42,7 @@ class Users extends Namecheap
      */
     public function getPricing(array $params)
     {
-        return $this->client->send($this->namespace.__FUNCTION__, $params);
+        return $this->client->send($this->namespace . __FUNCTION__, $params);
     }
 
     /**
@@ -56,7 +58,7 @@ class Users extends Namecheap
      */
     public function getBalances()
     {
-        return $this->client->send($this->namespace.__FUNCTION__);
+        return $this->client->send($this->namespace . __FUNCTION__);
     }
 
     /**
@@ -69,7 +71,7 @@ class Users extends Namecheap
      */
     public function changePassword(array $params)
     {
-        return $this->client->send($this->namespace.__FUNCTION__, $params);
+        return $this->client->send($this->namespace . __FUNCTION__, $params);
     }
 
     /**
@@ -82,6 +84,6 @@ class Users extends Namecheap
      */
     public function update(array $params)
     {
-        return $this->client->send($this->namespace.__FUNCTION__, $params);
+        return $this->client->send($this->namespace . __FUNCTION__, $params);
     }
 }

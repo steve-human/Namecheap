@@ -65,7 +65,7 @@ class Address extends Namecheap
     /**
      * Gets information for the requested addressID
      *
-     * @params array $params            
+     * @params array $params
      *
      * @return \Namecheap\Api\Response
      * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:users.address:getinfo
