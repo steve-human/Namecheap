@@ -31,6 +31,19 @@ class Response
     }
 
     /**
+     * Returns the CommandResponse
+     *
+     * @return stdClass A stdClass object representing the CommandResponses, null if invalid response
+     */
+    public function data() {
+        if ($this->xml && $this->xml instanceof \SimpleXMLElement) {
+            return $this->xml->CommandResponse;
+        }
+        return null;
+    }
+    
+
+    /**
      * Returns the response status (OK = success, ERROR = error, null = invalid responses)
      *
      * @return string NULL
@@ -96,7 +109,7 @@ class Response
      * @param mixed $data
      * @return array 
      */
-    public function toArray($data)
+    private function toArray($data)
     {
         return json_decode(json_encode($data), true);
     }
