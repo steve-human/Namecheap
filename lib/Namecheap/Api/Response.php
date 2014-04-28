@@ -71,6 +71,16 @@ class Response
     }
     
     /**
+     * Returns the XML response
+     * 
+     * @return string
+     */
+    public function getXml()
+    {
+        return $this->xml;
+    }
+    
+    /**
      * Returns the raw XML response
      * 
      * @return string
