@@ -21,7 +21,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getlist
+     * @see https://www.namecheap.com/support/api/methods/domains/get-list.aspx
      */
     public function getList(array $params)
     {
@@ -32,7 +32,7 @@ class Domains extends Namecheap
      * Returns a list of tlds
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:gettldlist
+     * @see https://www.namecheap.com/support/api/methods/domains/get-tld-list.aspx
      */
     public function getTldList()
     {
@@ -45,7 +45,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:create
+     * @see https://www.namecheap.com/support/api/methods/domains/create.aspx
      */
     public function create(array $params)
     {
@@ -58,7 +58,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getcontacts
+     * @see https://www.namecheap.com/support/api/methods/domains/get-contacts.aspx
      */
     public function getContacts(array $params)
     {
@@ -71,7 +71,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:setcontacts
+     * @see https://www.namecheap.com/support/api/methods/domains/set-contacts.aspx
      */
     public function setContacts()
     {
@@ -84,7 +84,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:check
+     * @see https://www.namecheap.com/support/api/methods/domains/check.aspx
      */
     public function check(array $params)
     {
@@ -97,7 +97,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:reactivate
+     * @see https://www.namecheap.com/support/api/methods/domains/reactivate.aspx
      */
     public function reactivate(array $params)
     {
@@ -110,7 +110,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:renew
+     * @see https://www.namecheap.com/support/api/methods/domains/renew.aspx
      */
     public function renew(array $params)
     {
@@ -123,7 +123,7 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:getregistrarlock
+     * @see https://www.namecheap.com/support/api/methods/domains/get-registrar-lock.aspx
      */
     public function getRegistrarLock(array $params)
     {
@@ -136,9 +136,22 @@ class Domains extends Namecheap
      * @param array $params            
      *
      * @return \Namecheap\Api\Response
-     * @see http://developer.namecheap.com/docs/doku.php?id=api-reference:domains:setregistrarlock
+     * @see https://www.namecheap.com/support/api/methods/domains/set-registrar-lock.aspx
      */
     public function setRegistrarLock(array $params)
+    {
+        return $this->client->send($this->namespace.__FUNCTION__, $params);
+    }
+
+    /**
+     *  Returns information about the requested domain. 
+     *
+     * @param array $params
+     *
+     * @return \Namecheap\Api\Response
+     * @see https://www.namecheap.com/support/api/methods/domains/get-info.aspx
+     */
+    public function getInfo(array $params)
     {
         return $this->client->send($this->namespace.__FUNCTION__, $params);
     }
