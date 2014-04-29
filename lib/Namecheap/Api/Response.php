@@ -37,7 +37,7 @@ class Response
      */
     public function data() {
         if ($this->xml && $this->xml instanceof \SimpleXMLElement) {
-            return $this->xml->CommandResponse;
+            return $this->xmlToArray($this->xml->CommandResponse);
         }
         return null;
     }
@@ -64,7 +64,7 @@ class Response
     public function getErrors()
     {
         if ($this->xml && $this->xml instanceof \SimpleXMLElement) {
-            return $this->toArray($this->xml->Errors);
+            return $this->xmlToArray($this->xml->Errors);
         }
         
         return null;
@@ -78,7 +78,7 @@ class Response
     public function getWarnings()
     {
         if ($this->xml && $this->xml instanceof \SimpleXMLElement) {
-            return $this->toArray($this->xml->Warnings);
+            return $this->xmlToArray($this->xml->Warnings);
         }
         return false;
     }
@@ -106,11 +106,42 @@ class Response
     /**
      * Returns an array from a SimpleXmlElement
      * 
-     * @param mixed $data
+     * @param SimpleXMLElement $data
      * @return array 
      */
-    private function toArray($data)
+    private function xmlToArray($data)
     {
-        return json_decode(json_encode($data), true);
+        $array = (array) $data;
+
+        //recursive Parser
+        foreach ($array as $key => $item) {
+
+            if ($item instanceof \SimpleXMLElement) {
+
+                if (count((array) $item) > 0) {
+
+                    $array[$key] = $this->xmlToArray($item);
+                } else {
+
+                    $array[$key] = null;
+                }
+
+            } elseif (is_array($item)) {
+
+
+                $array[$key] = $this->xmlToArray($item);
+            }
+        }
+
+        if (isset($array['@attributes'])) {
+
+            foreach ($array['@attributes'] as $key => $value) {
+
+                $array[$key] = $value;
+            }
+            unset($array['@attributes']);
+        }
+
+        return $array;
     }
 }

@@ -23,7 +23,7 @@ class Domains extends Namecheap
      * @return \Namecheap\Api\Response
      * @see https://www.namecheap.com/support/api/methods/domains/get-list.aspx
      */
-    public function getList(array $params)
+    public function getList(array $params = array())
     {
         return $this->client->send($this->namespace.__FUNCTION__, $params);
     }
