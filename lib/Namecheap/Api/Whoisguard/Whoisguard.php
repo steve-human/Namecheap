@@ -1,5 +1,5 @@
 <?php
-namespace Namecheap\Whoisguard;
+namespace Namecheap\Api\Whoisguard;
 
 use Namecheap\Api\Namecheap;
 

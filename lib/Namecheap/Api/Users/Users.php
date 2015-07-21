@@ -1,5 +1,5 @@
 <?php
-namespace Namecheap\Users;
+namespace Namecheap\Api\Users;
 
 use Namecheap\Api\Namecheap;
 
