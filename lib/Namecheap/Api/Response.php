@@ -119,15 +119,14 @@ class Response
             if ($item instanceof \SimpleXMLElement) {
 
                 if (count((array) $item) > 0) {
-
                     $array[$key] = $this->xmlToArray($item);
+                } elseif ((string) $item) {
+                    $array[$key] = (string) $item;
                 } else {
-
                     $array[$key] = null;
                 }
 
             } elseif (is_array($item)) {
-
 
                 $array[$key] = $this->xmlToArray($item);
             }
