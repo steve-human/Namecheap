@@ -93,4 +93,17 @@ class Ssl extends Namecheap
     {
         return $this->client->send($this->namespace.__FUNCTION__, $params);
     }
+
+    /**
+     * Renews a new SSL certificate
+     *
+     * @param array $params
+     *
+     * @return \Namecheap\Api\Response
+     * @see https://www.namecheap.com/support/api/methods/ssl/renew.aspx
+     */
+    public function renew(array $params)
+    {
+        return $this->client->send($this->namespace.__FUNCTION__, $params);
+    }
 }
