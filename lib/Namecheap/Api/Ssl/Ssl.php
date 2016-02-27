@@ -1,5 +1,5 @@
 <?php
-namespace Namecheap\Ssl;
+namespace Namecheap\Api\Ssl;
 
 use Namecheap\Api\Namecheap;
 
